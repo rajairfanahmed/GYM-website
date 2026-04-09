@@ -1,0 +1,82 @@
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--space-6);
+}
+
+.serviceCard {
+  background: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  display: block;
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.serviceImage {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.serviceImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.serviceCard:hover .serviceImage img {
+  transform: scale(1.05);
+}
+
+.serviceContent {
+  padding: var(--space-6);
+}
+
+.serviceContent h3 {
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.serviceContent p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+  line-height: var(--line-height-relaxed);
+}
+
+.serviceFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1.125rem;
+}
+
+.link {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
+  transition: transform var(--transition-fast);
+  display: inline-block;
+}
+
+.serviceCard:hover .link {
+  transform: translateX(4px);
+}
+
+@media (max-width: 767px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+}

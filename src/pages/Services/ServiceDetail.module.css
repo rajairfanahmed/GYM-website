@@ -1,0 +1,121 @@
+.hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, var(--color-bg));
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: var(--space-10);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main h1 {
+  margin-bottom: var(--space-5);
+}
+
+.description {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+.benefits h2 {
+  margin-bottom: var(--space-5);
+}
+
+.benefits ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--font-size-large);
+  color: var(--color-text-secondary);
+}
+
+.checkIcon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.card {
+  background: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-4);
+}
+
+.detail:last-of-type {
+  margin-bottom: var(--space-6);
+}
+
+.label {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.value {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1.125rem;
+}
+
+@media (max-width: 1023px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    height: 300px;
+    margin-top: -70px;
+    padding-top: 70px;
+  }
+}
