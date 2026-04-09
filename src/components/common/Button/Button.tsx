@@ -1,4 +1,4 @@
-import { ReactNode, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
+import React, { ReactNode, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import styles from './Button.module.css'
@@ -82,9 +82,12 @@ export default function Button({
   }
 
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { onDrag, onDragStart, onDragEnd, ...safeProps } = props as ButtonHTMLAttributes<HTMLButtonElement> & Record<string, unknown>
+
   return (
     <motion.button 
-      {...(props as ButtonHTMLAttributes<HTMLButtonElement>)} 
+      {...(safeProps as React.ComponentProps<typeof motion.button>)} 
       className={classes}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}

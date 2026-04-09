@@ -14,6 +14,7 @@ export interface Trainer {
     instagram?: string;
     facebook?: string;
     twitter?: string;
+    linkedin?: string;
   };
 }
 

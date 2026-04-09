@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { FiInstagram, FiFacebook, FiTwitter, FiLinkedin } from 'react-icons/fi'
+import { FiInstagram, FiFacebook, FiTwitter } from 'react-icons/fi'
 import Hero from '@/components/sections/Hero/Hero'
 import { trainers } from '@/utils/constants'
 import styles from './Trainers.module.css'

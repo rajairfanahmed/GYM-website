@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { FiClock, FiUsers, FiTrendingUp } from 'react-icons/fi'
+import { FiClock, FiUsers } from 'react-icons/fi'
 import Hero from '@/components/sections/Hero/Hero'
 import { classes } from '@/utils/constants'
 import styles from './Classes.module.css'
