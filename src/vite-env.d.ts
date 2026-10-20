@@ -1,4 +1,4 @@
-/// \u003creference types="vite/client" /\u003e
+﻿/// <reference types="vite/client" />
 
 declare module '*.module.css' {
   const classes: { readonly [key: string]: string }
